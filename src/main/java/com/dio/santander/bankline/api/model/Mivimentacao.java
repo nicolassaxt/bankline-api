@@ -29,6 +29,9 @@ public class Mivimentacao {
 	@Enumerated(EnumType.STRING)//salvar valor literal do Enum
 	private MovimentacaoTipo tipo;
 	
+	@Column(name = "id_conta")
+	private Integer idConta;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -59,6 +62,10 @@ public class Mivimentacao {
 	public void setTipo(MovimentacaoTipo tipo) {
 		this.tipo = tipo;
 	}
-	
-	
+	public Integer getIdConta() {
+		return idConta;
+	}
+	public void setIdConta(Integer idConta) {
+		this.idConta = idConta;
+	}
 }
