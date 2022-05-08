@@ -1,6 +1,7 @@
 package com.dio.santander.bankline.api.model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -38,8 +39,8 @@ public class Mivimentacao {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public LocalDateTime getDataHora() {
-		return dataHora;
+	public String getDataHora() {
+		return dataHora.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
 	}
 	public void setDataHora(LocalDateTime dataHora) {
 		this.dataHora = dataHora;
